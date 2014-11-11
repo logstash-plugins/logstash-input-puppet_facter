@@ -1,7 +1,7 @@
 # encoding: utf-8
 require "logstash/inputs/base"
 require "logstash/namespace"
-require "json"
+require "logstash/json"
 
 # Connects to a puppet server and requests facts
 class LogStash::Inputs::PuppetFacter < LogStash::Inputs::Base
@@ -68,7 +68,7 @@ class LogStash::Inputs::PuppetFacter < LogStash::Inputs::Base
         raise
       end
       begin
-        data = JSON.parse(response.body)
+        data = LogStash::Json.load(response.body)
       rescue
         logger.error("Unable to parse cert status response")
         raise
@@ -87,7 +87,7 @@ class LogStash::Inputs::PuppetFacter < LogStash::Inputs::Base
           next
         end
         begin
-          data = JSON.parse(response.body)["values"]
+          data = LogStash::Json.load(response.body)["values"]
         rescue
           logger.warn("Unable to parse response from facts for node " + host)
           next
