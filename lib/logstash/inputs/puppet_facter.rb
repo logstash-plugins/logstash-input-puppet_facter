@@ -6,7 +6,6 @@ require "json"
 # Connects to a puppet server and requests facts
 class LogStash::Inputs::PuppetFacter < LogStash::Inputs::Base
   config_name "puppet_facter"
-  milestone 1
 
   #Remote IP Address to connect to
   config :host, :validate => :string, :default => "0.0.0.0"
