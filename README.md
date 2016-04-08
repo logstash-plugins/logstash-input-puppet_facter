@@ -1,7 +1,6 @@
 # Logstash Plugin
 
-[![Build
-Status](http://build-eu-00.elastic.co/view/LS%20Plugins/view/LS%20Inputs/job/logstash-plugin-input-puppet_facter-unit/badge/icon)](http://build-eu-00.elastic.co/view/LS%20Plugins/view/LS%20Inputs/job/logstash-plugin-input-puppet_facter-unit/)
+[![Travis Build Status](https://travis-ci.org/logstash-plugins/logstash-input-puppet_facter.svg)](https://travis-ci.org/logstash-plugins/logstash-input-puppet_facter)
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
 
