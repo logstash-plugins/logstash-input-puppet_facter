@@ -94,8 +94,8 @@ class LogStash::Inputs::PuppetFacter < LogStash::Inputs::Base
         end
         for key, value in data
           event = LogStash::Event.new("host" => host)
-          event["fact_name"] = key
-          event["fact_value"] = value
+          event.set("fact_name", key)
+          event.set("fact_value", value)
           decorate(event)
           output_queue << event
         end
