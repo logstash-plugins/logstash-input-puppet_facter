@@ -1,4 +1,0 @@
-    
-# additional plugin specific jobs
-jobs:
-  - INTEGRATION=true SECURE_INTEGRATION=true SNAPSHOT=true ELASTIC_STACK_VERSION=8.current DOCKER_ENV=dockerjdk21.env
